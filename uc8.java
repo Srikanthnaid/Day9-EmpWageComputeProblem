@@ -1,12 +1,12 @@
 
-public class uc7 {
+public class uc8 {
 	public static final int IS_FULL_TIME = 1;
 	public static final int IS_PART_TIME = 2;
 	private int EMP_RATE_PER_HOUR;
 	private int NUM_OF_WORKING_DAYS;
 	private int MAX_HRS_IN_MONTH;
 
-	public void computeWage(int empRatePerHour, int numberOfWorkingDays, int maxHrs) {
+	public void computeWage(String company, int empRatePerHour, int numberOfWorkingDays, int maxHrs) {
 		this.EMP_RATE_PER_HOUR = empRatePerHour;
 		this.NUM_OF_WORKING_DAYS = numberOfWorkingDays;
 		this.MAX_HRS_IN_MONTH = maxHrs;
@@ -34,11 +34,13 @@ public class uc7 {
 			totalEmpWage += empWage;
 		}
 		totalEmpWage = totalEmpHrs * EMP_RATE_PER_HOUR;
-		System.out.println("Total Emp Wage: " + totalEmpWage);
+		System.out.println("Total Emp Wage of an employee in " + company + " is " + totalEmpWage);
 	}
 
 	public static void main(String[] args) {
-		uc7 empWageBuilder = new uc7();
-		empWageBuilder.computeWage(20, 20, 100);
+		System.out.println("Welcome To Employee Wage builder Using OOPS concepts");
+		uc8 empWageBuilder = new uc8();
+		empWageBuilder.computeWage("AMAZON", 20, 20, 100);
+		empWageBuilder.computeWage("D-mart", 10, 15, 100);
 	}
 }
